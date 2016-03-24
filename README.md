@@ -87,9 +87,11 @@ Total	100 %
 ## Approximate Course schedule (subject to change)
 
 <table>
-<th><td>Day</td><td>Date</td><td>Presenter</td><td>Topic</td><td>Notes</td></th>
+<thead><tr><th>Day</th><th>Date</th><th>Presenter</th><th>Topic</th><th>Notes</th></tr></thead>
+<tbody>
 <tr><td>Monday</td><td>28 March</td><td>Maj Freels</td><td>Course Overview</td><td>None</td></tr>
 <tr><td>Wednesday</td><td>30 March</td><td>Maj Freels</td><td>Course Overview</td><td>None</td></tr>
+</tbody>
 </table>
 
 	Date	Topic	Readings	Notes:
