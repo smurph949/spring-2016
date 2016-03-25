@@ -74,7 +74,8 @@ Final Exam	25%
 Total	100 %
 
 ## A Few Important Dates
-- No Class:   18 January 2016 (Columbus Day), 15 February 2016 (President's Day) 
+- Monday, 30 May 2016 (Memorial Day) - <font style='color: red;'>__No Class__</font>
+- Friday, 27 May 2016 (AETC Family Day)
 
 ## Grading
 - (1.00 - 0.93]: A
@@ -89,8 +90,24 @@ Total	100 %
 <table>
 <thead><tr><th>Day</th><th>Date</th><th>Presenter</th><th>Topic</th><th>Notes</th></tr></thead>
 <tbody>
-<tr><td>Monday</td><td>28 March</td><td>Maj Freels</td><td>Course Overview</td><td>None</td></tr>
-<tr><td>Wednesday</td><td>30 March</td><td>Maj Freels</td><td>Course Overview</td><td>None</td></tr>
+<tr><td>Mon</td><td>28 March</td><td>Maj Freels</td><td>Course Overview</td><td>None</td></tr>
+<tr><td>Wed</td><td>30 March</td><td>Maj Freels</td><td>Course Overview</td><td>None</td></tr>
+<tr> <td> Mon </td> <td> 04 Apr </td> <td> Shandon James </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Wed </td> <td> 06 Apr </td> <td> Corey Degroot </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Mon </td> <td> 11 Apr </td> <td> Joseph Buyer </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Wed </td> <td> 13 Apr </td> <td> Michael Blaess </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Mon </td> <td> 18 Apr </td> <td> Christopher Schmidt </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Wed </td> <td> 20 Apr </td> <td> Blake McCollum </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Mon </td> <td> 25 Apr </td> <td> John Nussbaum </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Wed </td> <td> 27 Apr </td> <td> Fisal Alzahrani </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Mon </td> <td> 02 May </td> <td> Keegan Vaira </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Wed </td> <td> 04 May </td> <td> Lidia Toscano </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Mon </td> <td> 09 May </td> <td> Robert McClanahan </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Wed </td> <td> 11 May </td> <td> Victor Guinn </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Mon </td> <td> 16 May </td> <td> Dustin Gooden </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Wed </td> <td> 18 May </td> <td> Abdulrahman Alwabel </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Mon </td> <td> 23 May </td> <td> Sean Murphy </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Wed </td> <td> 25 May </td> <td> Jim Daniels III </td> <td> Student Research </td> <td>  </td> </tr>
 </tbody>
 </table>
 
