@@ -90,9 +90,9 @@ Total	100 %
 <table>
 <thead><tr><th>Day</th><th>Date</th><th>Presenter</th><th>Topic</th><th>Notes</th></tr></thead>
 <tbody>
-<tr><td>Mon</td><td>28 March</td><td>Maj Freels</td><td>Course Overview</td><td>None</td></tr>
-<tr><td>Wed</td><td>30 March</td><td>Maj Freels</td><td>Course Overview</td><td>None</td></tr>
-<tr> <td> Mon </td> <td> 04 Apr </td> <td> Shandon James </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Mon </td> <td> 28 Mar </td> <td> Maj Freels </td> <td> Course Overview </td> <td> None </td> </tr>
+  <tr> <td> Wed </td> <td> 30 Mar </td> <td> Maj Freels </td> <td> Course Overview </td> <td> None </td> </tr>
+  <tr> <td> Mon </td> <td> 04 Apr </td> <td> Shandon James </td> <td> Student Research </td> <td>  </td> </tr>
   <tr> <td> Wed </td> <td> 06 Apr </td> <td> Corey Degroot </td> <td> Student Research </td> <td>  </td> </tr>
   <tr> <td> Mon </td> <td> 11 Apr </td> <td> Joseph Buyer </td> <td> Student Research </td> <td>  </td> </tr>
   <tr> <td> Wed </td> <td> 13 Apr </td> <td> Michael Blaess </td> <td> Student Research </td> <td>  </td> </tr>
@@ -108,6 +108,8 @@ Total	100 %
   <tr> <td> Wed </td> <td> 18 May </td> <td> Abdulrahman Alwabel </td> <td> Student Research </td> <td>  </td> </tr>
   <tr> <td> Mon </td> <td> 23 May </td> <td> Sean Murphy </td> <td> Student Research </td> <td>  </td> </tr>
   <tr> <td> Wed </td> <td> 25 May </td> <td> Jim Daniels III </td> <td> Student Research </td> <td>  </td> </tr>
+  <tr> <td> Mon </td> <td> 30 May </td> <td> No Class </td> <td> Memorial Day </td> <td> None </td> </tr>
+  <tr> <td> Wed </td> <td> 01 Jun </td> <td> Maj Freels </td> <td> Course Wrap-up </td> <td> None </td> </tr>
 </tbody>
 </table>
 
