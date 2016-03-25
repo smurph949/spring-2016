@@ -98,8 +98,9 @@ footer p {
 
 a {
   text-decoration: none;
-  color: #007edf;
+  color:#b44900;
   text-shadow: none;
+  font-weight: bold;
 
   transition: color 0.5s ease;
   transition: text-shadow 0.5s ease;
