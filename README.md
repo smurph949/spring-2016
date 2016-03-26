@@ -1,3 +1,10 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/my-stylesheet.css">
+</head>
+</html>
+
+
 ## Welcome to RSCH 630!
 
 ## Course Time and Location
@@ -108,5 +115,3 @@ Total	100 %
   <tr> <td> Wed </td> <td> 01 Jun </td> <td> Maj Freels </td> <td> Course Wrap-up </td> <td> None </td> </tr>
 </tbody>
 </table>
-
-<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/my-stylesheet.css">
