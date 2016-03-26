@@ -13,19 +13,20 @@
 ## Office hours
 - MTWF 1000-1100 or by appt. (subject to change depending on student schedules).
 
-## Course Objectives
+## Course Overview
 
 - A research methods course is an important foundational course for any graduate program.  
 
-- The objectives for this course are
- 
-    + To provide an understanding of basic many different research techniques and concepts related to scientific inquiry. 
 
-    + To advance students along the research process by introducing the basic tools needed to critically analyze claims made through written and oral means, and determine the degree to which these claims are valid.
+## Course Objectives
 
-    + To help students not only in conducting research, but also in judging the validity of any claims made in articles and newspapers, trade journals, academic journals, briefings, presentations, and professional discussions.
+1) To provide an understanding of basic many different research techniques and concepts related to scientific inquiry. 
 
-    + To provide a foundation for students in designing and conducting their own research projects and determine how close to the truth they have come in their own efforts 
+2) To advance students along the research process by introducing the basic tools needed to critically analyze claims made through written and oral means, and determine the degree to which these claims are valid.
+
+3) To help students not only in conducting research, but also in judging the validity of any claims made in articles and newspapers, trade journals, academic journals, briefings, presentations, and professional discussions.
+
+4) To provide a foundation for students in designing and conducting their own research projects and determine how close to the truth they have come in their own efforts 
 
 ## Required Text
 
@@ -108,3 +109,4 @@ Total	100 %
 </tbody>
 </table>
 
+<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/my-stylesheet.css">
