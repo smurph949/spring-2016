@@ -1,0 +1,174 @@
+---
+title: "RSCH 630 - Research Methods"
+subtitle: 'Final Exam'
+author: "Your Name"
+date: "Due `r format(as.POSIXct(594000, origin = '2016-06-01'), '%R %x')`"
+bibliography: "resources/bibliography.bib"
+csl: "resources/ieee.csl"
+output:
+  pdf_document:
+    fig_cap: yes
+    includes:
+      in_header: resources/jkf.header.tex
+  html_document:
+    css: resources/homework.css
+    fig_cap: yes
+    highlight: pygments
+    theme: readable
+    toc: yes
+fontsize: 11pt
+geometry: margin=1in
+abstract: \singlespace
+  "The purpose of this entire course has been to introduce techniques that can help you during your research.  And while it's easy to focus on the mathematical methods, you're likely to spend more time on the grunt-work tasks, such as getting and cleaning data, building tables and figures, numbering equations and citing sources. On the first day of class I stated that a lot of effort has gone into developing tools that make these tasks simpler - and in some cases almost trivial.  It would be wrong for me to simply make such a statement without showing you how to take advantage of these tools.  Therefore, the purpose of this exam is to have each of you build (and use) a data science toolkit that links these tools together. R/RStudio will comprise the core of this toolkit.  However, even if you don't use R, this toolkit will allow you to add in almost any other language you want.  Building the toolkit will take some effort up-front and will introduce you to several new concepts, but once it's up and running the workflow becomes almost seamless.  Alright, let's get started."
+---
+
+```{r setup, echo=FALSE,message=FALSE, warning=FALSE, results='hide'}
+source('resources/setup.R')
+output <- getYAML('rsch630-final.Rmd')$output
+getPackage('SMRD',         repo = 'Auburngrads')
+getPackage('survival',     repo = 'CRAN')
+getPackage('actuar',       repo = 'CRAN')
+getPackage('evd',          repo = 'CRAN')
+getPackage('knitcitations',repo = 'CRAN')
+step = 0
+cleanbib()
+bib <- read.bibtex('resources/rsch-630.bib')
+bort = citet(bib[author='bort'])
+mad = citet('10.1016/j.ejor.2016.01.058')
+berger = citet('10.2307/2291285')
+write.bibtex(file = 'resources/bibliography.bib')
+```
+
+# Installing Resources
+
+## Step `r step = step+1 ; step` - Create a GitHub Account and Fork the `rsch-630` Repo
+
+- Go to [GitHub](https://github.com/) and sign up for an account 
+
+    + Choose a username 
+
+    + Add an email address (don't use your afit.edu address as your primary, you can add it as a secondary address later)
+
+    + Enter a password
+
+- GitHub is a version control tool for [ASCII](https://en.wikipedia.org/wiki/ASCII) or [UTF-8](https://en.wikipedia.org/wiki/UTF-8) encoded files
+
+    + Organizes code, text files, images, etc. into repositories 'repos'
+
+    + Easy to collaborate on projects with other users any where in the world without 
+
+    + No more emailing files, DVD's, USB drives - It's like dropbox on steroids
+
+    + It can be used on AF NIPR machines (probably not all, but haven't found one yet that couldn't)
+
+    + GitHub has a learning curve, but once you get the hang of it you don't go back
+
+    + Outside of AFIT/AF, GitHub is the standard - some employers prefer GitHub profiles over resumes
+
+> "It's become so important to its 13 million users that if GitHub goes down, the software development world practically stops." [`r try(bort)`]
+
+## Step `r step = step+1 ; step` - Install R
+
+On personal machines you can install `r R.version.string` from [https://cloud.r-project.org/](https://cloud.r-project.org/) selecting the default installation
+
+On AFIT machines you can install `r R.version.string` from the [R:/Stats/R](file:///R:/Stats/R) folder
+
+- Select the green installer icon to ensure R installs to Program Files
+
+- Follow the prompts for a default installation
+
+## Step `r step = step+1 ; step` - Look Around
+
+Open R up...It's ugly = no one would use R if this was all there was to it.  Thankfully there's a __`r toupper('lot')`__ more
+
+## Step `r step = step+1 ; step` - Install a Bunch of R Packages
+
+- `install.packages(c('installr','devtools','rmarkdown'))`
+- `install.packages(c('shiny','RJSONIO','xtable'))`
+- `install.packages(c('DT','knitcitations','RefManageR'))`
+
+## Step `r step = step+1 ; step` - Install RStudio
+
+- If you using a Windows machine this is really easy, just run `installr::install.rstudio()`
+
+- If you're not using Windows you'll have to go to [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)   to install the most recent version
+
+- __NOTE:__ RStudio is an IDE 
+
+    + You can work on files written in different languages side-by-side
+
+    + You can mix languages together in a single file  
+
+## Step `r step = step+1 ; step` Install & Connect Rtools
+
+If you using a Windows machine this is again really easy, just run `installr::install.rtools()`
+
+If you're not using Windows you'll have to go to [https://cran.r-project.org/bin/windows/Rtools/](https://cran.r-project.org/bin/windows/Rtools/) to install the Rtools 3.3
+
+## Step `r step = step+1 ; step` Install & Connect Git
+
+If you using a Windows machine, guess what?  Just run `installr::install.git()`
+
+If you're not `r mad` using Windows go to [https://git-scm.com/](https://git-scm.com/)
+
+# Working Example
+
+## Scraping data from Data.gov
+
+```{r}
+getPackage('httr',      repo = 'CRAN')
+getPackage('RSocrata',  repo = 'Chicago')
+getPackage('rdatacite', repo = 'ropensci')
+getPackage('data.table',repo = 'CRAN')
+
+url <- 'https://data.cms.gov/resource/ehrv-m9r6.json'
+
+hosp.data <- content(GET(url))
+
+DATA <- matrix(NA, nrow = 1000, ncol = length(hosp.data[[1]]))
+
+for(i in 1:1000) {
+
+dats <- data.frame(unlist(hosp.data[[i]]),stringsAsFactors = F)
+DATA[i,] <- t(data.frame(dats,stringsAsFactors = F))
+}
+```
+
+
+## Processing The Data
+
+```{r}
+DATA <- as.data.frame(DATA, stringsAsFactors = F)
+
+colnames(DATA) <- rownames(dats)
+
+DATA[c(1:3,12)] <- lapply(X = DATA[c(1:3,12)], FUN = {unlist ; as.numeric} )
+#DATA[c(1:3,12)] <- lapply(X = DATA[c(1:3,12)], FUN = as.numeric)
+dats <- data.table::as.data.table(DATA)
+setkey(dats, provider_state)
+
+covered = dats[,j = sum(average_covered_charges), by = provider_state]
+payment = dats[,j = sum(average_medicare_payments,average_medicare_payments_2), by = provider_state]
+discharge = dats[,j = sum(total_discharges), by = provider_state]
+
+sums <- covered[payment[discharge]]
+
+colnames(sums) <- c('Provider State','Covered Charges','Medicare Payments','Total Discharges')
+```
+
+## Inserting tables automatically
+
+```{r}
+library(xtable)
+xsums <- xtable(sums,
+                caption = 'Extracranial Procedures Medical Payment Information')
+print(xsums,
+      comment = F,
+      include.rownames = F, 
+      caption.placement = 'top',
+      table.placement = 'h')
+```
+
+# References
+
+
